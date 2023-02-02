@@ -7,12 +7,12 @@ import Home from "./pages/Home"
 function App() {
   return (
     <BrowserRouter>
-      <main className="absolute top-0 left-0 right-0 bottom-0 transition-all duration-500">
+      <div className="relative transition-all duration-500">
         <Background />
         <Routes>
           <Route path="/" element={<Home />} />
         </Routes>
-      </main>
+      </div>
     </BrowserRouter>
   )
 }

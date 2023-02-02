@@ -4,11 +4,11 @@ import { motion } from 'framer-motion';
 function Background() {
 	return (
     <motion.div 
-      className='bg-[url(/src/assets/img/bg.png)] dark:bg-[url(/src/assets/img/bg-dark.jpg)] bg-cover w-full h-full top-0 bottom-0 right-0 left-0'
+      className='absolute w-screen h-screen top-0 bottom-0 right-0 left-0 bg-[url(/src/assets/img/bg.png)] dark:bg-[url(/src/assets/img/bg-dark.jpg)] bg-cover'
       animate={{ backgroundPosition: ["0% 0%", "100% 100%"] }}
       transition={{ 
         duration: 300, 
-        repeat: Infinity, 
+        repeat: Infinity,
         repeatType: 'reverse', 
         ease: 'linear'
        }}
