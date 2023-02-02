@@ -1,37 +1,38 @@
 import React, { useState, useEffect } from "react"
 import { motion, AnimatePresence } from "framer-motion"
-import LightIcon from "../assets/icons/Light"
-import DarkIcon from "../assets/icons/Dark"
+import LightIcon from "../icons/Light"
+import DarkIcon from "../icons/Dark"
 
 function ToggleTheme() {
 	const [theme, setTheme] = useState(null)
 
 	useEffect(() => {
-		if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+		const storedTheme = localStorage.getItem("theme");
+		if (storedTheme) {
+			setTheme(storedTheme)
+			document.documentElement.classList.add(storedTheme)
+		} else if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
 			setTheme("dark")
+			document.documentElement.classList.add("dark")
 		} else {
 			setTheme("light")
 		}
 	}, [])
 
 	const handleThemeSwitch = () => {
-		setTheme(theme === "dark" ? "light" : "dark")
+		const newTheme = theme === "dark" ? "light" : "dark";
+		setTheme(newTheme);
+		localStorage.setItem("theme", newTheme);
+		document.documentElement.classList.remove(theme);
+		document.documentElement.classList.add(newTheme);
 	}
-
-	useEffect(() => {
-		if (theme === "dark") {
-			document.documentElement.classList.add("dark")
-		} else {
-			document.documentElement.classList.remove("dark")
-		}
-	}, [theme])
 
 	const spring = {
 		type: "spring",
 		damping: 12,
 		stiffness: 100
 	}
-
+	
 	return (
 		<div
 			className={`
