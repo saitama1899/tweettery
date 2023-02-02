@@ -1,4 +1,3 @@
-/** @type {import('tailwindcss').Config} */
 module.exports = {
   darkMode: 'class',
   content: [
@@ -8,8 +7,11 @@ module.exports = {
   theme: {
     extend: {
       colors: {
+        primary: '#000000',
+        bgDarkPrimary: '#1e1e1e',
       },
       fontFamily: {
+        arista: ["Arista", "sans-serif"],
       },
       animation: {
       },
