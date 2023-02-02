@@ -1,14 +1,71 @@
-import React from 'react';
-function Searcher() {
+import React, { useState, useEffect } from 'react'
+import axios from 'axios'
+import { motion } from 'framer-motion'
+import Arrow from '../icons/Arrow'
+import CircleLoader from './CircleLoader'
+
+function Searcher(props) {
+  const [inputValue, setInputValue] = useState('')
+  const [isLoading, setIsLoading] = useState(false)
+  // const [error, setError] = useState(false)
+
+  const handleInputChange = (event) => {
+    setInputValue(event.target.value.replace(/[^a-zA-Z0-9]/g, '').slice(0, 20))
+  }
+
+  const handleSubmit = (event) => {
+    event.preventDefault()
+    setIsLoading(true)
+    props.onLoading(isLoading)
+    axios
+      .post('https://tweettery-api.vercel.app/api/cohere/summary', { username: inputValue })
+      .then((response) => {
+        setIsLoading(false)
+        props.onData(response)
+      })
+      .catch((error) => {
+        setIsLoading(false)
+        props.onError(error)
+        setTimeout(() => {
+          // setError(false)
+        }, 3000)
+        console.log(error)
+      })
+      .finally(() => {
+        props.onLoading(isLoading)
+      })
+  }
+
   return (
-    <>
-      {/* <hr className="mt-5 dark:border-gray-500 border-gray-300" /> */}
-      <div className="m-auto flex justify-between flex-wrap">
-        <input type="text" className="w-[82%] rounded-lg p-2 my-2 selection:border-gray-100" placeholder="@midudev" />
-        <button className="w-[15%] bg-sky-500 text-white rounded-lg p-2 my-2">Search</button>
+    <form onSubmit={handleSubmit}>
+      <div className="m-auto flex justify-between flex-wrap mt-6 mb-4">
+        <motion.input
+          type="text"
+          className="w-[85%] rounded-sm px-2 h-8 bg-gray-100 hover:bg-white outline-none"
+          placeholder="midudev"
+          value={inputValue}
+          onChange={handleInputChange}
+          disabled={isLoading}
+          whileHover={!isLoading && { scale: 1.025 }}
+          transition={{ type: "spring", stiffness: 400, damping: 10 }}
+          required
+        />
+        <motion.button
+          className="w-[10%] bg-gradient-to-r bg-bg-sky-600 hover:bg-sky-500 h-8 text-white rounded-sm"
+          whileHover={!isLoading && { scale: 1.1 }}
+          whileTap={!isLoading && { scale: 0.9 }}
+          transition={{ type: "spring", stiffness: 400, damping: 10 }}
+          style={{ background: isLoading ? 'none' : '#0284c7' }}
+          disabled={isLoading}
+        >
+          { isLoading 
+            ? <CircleLoader />
+            : <Arrow className='m-auto' />
+          }
+        </motion.button>
       </div>
-    </>
+    </form>
   )
 }
 
-export default Searcher
+export default Searcher;
