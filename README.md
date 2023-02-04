@@ -10,6 +10,7 @@ This is a 1-week project in order to participate at [@midudev](https://www.githu
 ![Desktop preview](screen.PNG)
 
 You can acces to the API code here https://github.com/saitama1899/tweettery-api. 
+
 Endpoints:
 - POST /api/cohere/summary : It expects a 'username' at body request.
 
