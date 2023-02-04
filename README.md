@@ -9,6 +9,12 @@ This is a 1-week project in order to participate at [@midudev](https://www.githu
 
 ![Desktop preview](https://i.ibb.co/LJZyrfX/screen.png)
 
+You can acces to the API code here https://github.com/saitama1899/tweettery-api. 
+Endpoints:
+- POST /api/cohere/summary : It expects a 'username' at body request.
+
+This endpoint receives a username and makes two queries to the Twitter API. One to retrieve the user ID and avatar, and another to retrieve the timeline of this ID. If everything goes well, it transforms the data and combines it with a prompt specifically designed for the Cohere AI to get two values: the first one, an array of values that contains the most prominent topics of this Twitter user. The second one, a brief summary of its content. In case something goes wrong, it returns the exact error.
+
 ## 💻 APP Built with
 - [Vite](https://vitejs.dev/) For build the project.
 - [ReactJs](https://es.reactjs.org/) For User UI.
