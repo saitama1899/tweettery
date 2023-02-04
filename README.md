@@ -45,9 +45,9 @@ node index.js
 
 ## 📑 Developer Notes
 
-# Developing the API 🗝
+### Developing the API 🗝
 - Notes 
-# Developing the APP 💻
+### Developing the APP 💻
 - Notes
 
 ## TODO
