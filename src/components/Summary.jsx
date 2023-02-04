@@ -78,7 +78,7 @@ function Summary({ data, isLoading, error }) {
 				{data?.data?.twitter && (
 					<>
 						<img src={data?.data?.twitter} alt="avatar" className="w-auto h-16 rounded-full translate-x-4 max-sm:hidden" />
-						<img src="/src/assets/img/ro.png" alt="bird" className="w-auto h-10 max-sm:hidden" />
+						<img src="/public/assets/img/ro.png" alt="bird" className="w-auto h-10 max-sm:hidden" />
 					</>
 				)}
 				<motion.div
