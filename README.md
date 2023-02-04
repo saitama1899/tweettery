@@ -4,10 +4,10 @@ With Tweettery you can get a quick summary of (almost) any Twitter account, for 
 
 This is a 1-week project in order to participate at [@midudev](https://www.github.com/midudev) hackathon: [midudev-cohere-2023](https://github.com/topics/midudev-cohere-2023), with main functionality on [co:here AI](https://cohere.ai/). Expect a lot of space for code, accessiblity and user experience improvements!
 
-- APP: tweettery.vercel.app
-- API: tweettery-api.vercel.app
+- APP: [tweettery.vercel.app](tweettery.vercel.app)
+- API: [tweettery-api.vercel.app](tweettery-api.vercel.app)
 
-![Desktop preview](https://i.ibb.co/tpMPh7D/Captura.png)
+![Desktop preview](https://i.ibb.co/b2KVFnM/screen.png)
 
 ## 💻 APP Built with
 - [Vite](https://vitejs.dev/) For build the project.
@@ -16,7 +16,7 @@ This is a 1-week project in order to participate at [@midudev](https://www.githu
 - [Tailwind](https://tailwindcss.com) For frontend styles.
 
 ## 🗝 API Built with
-- [Express](https://expressjs.com/es/)
+- [Express](https://expressjs.com/es/) For make the API.
 - [Co:here AI](https://cohere.ai/) For get summary data given a raw Twitter account timeline.
 - [Twitter API](https://developer.twitter.com/en/docs/twitter-api) For get the user id, avatar, and the timeline given a username.
 
