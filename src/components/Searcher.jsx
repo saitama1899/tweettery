@@ -13,26 +13,23 @@ function Searcher(props) {
     setInputValue(event.target.value.replace(/[^a-zA-Z0-9]/g, '').slice(0, 20))
   }
 
+  useEffect(() => {
+    props.onLoading(isLoading)
+  }, [isLoading])
+
   const handleSubmit = (event) => {
     event.preventDefault()
     setIsLoading(true)
-    props.onLoading(isLoading)
     axios
       .post('https://tweettery-api.vercel.app/api/cohere/summary', { username: inputValue })
       .then((response) => {
-        setIsLoading(false)
         props.onData(response)
       })
       .catch((error) => {
-        setIsLoading(false)
         props.onError(error)
-        setTimeout(() => {
-          // setError(false)
-        }, 3000)
-        console.log(error)
       })
       .finally(() => {
-        props.onLoading(isLoading)
+        setIsLoading(false)
       })
   }
 
