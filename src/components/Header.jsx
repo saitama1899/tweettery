@@ -18,7 +18,7 @@ function Header(props) {
 	return (
 		<header>
       <Navbar />
-			<div className='my-8 m-auto shadow-[0_4px_30px_rgba(0,0,0,0.1)] backdrop-blur-[4.5px] bg-white/[.33] dark:bg-black/[.6] rounded-xl py-2 px-16 hover:bg-white/[.5] dark:hover:bg-black/[.7]  duration-500 select-none'>
+			<div className='my-8 m-auto shadow-[0_4px_30px_rgba(0,0,0,0.1)] backdrop-blur-[4.5px] bg-white/[.33] dark:bg-black/[.6] rounded-xl py-2 px-16 max-lg:px-12 max-sm:px-6 hover:bg-white/[.5] dark:hover:bg-black/[.7]  duration-500 select-none'>
 				<Logo />
 				<Searcher onData={handleDataFromChild} onError={handleErrorFromChild} onLoading={handleLoadingFromChild} />
 			</div>
