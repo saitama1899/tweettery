@@ -31,7 +31,7 @@ function Home() {
   return (
     <main className="absolute top-0 right-0 bottom-0 left-0 h-full w-[655px] m-auto max-lg:w-[90%]">
       <Header onData={handleDataFromParent} onError={handleErrorFromParent} onLoading={handleLoadingFromParent} />
-      <div className="m-auto w-full overflow-x-hidden">
+      <div className="m-auto w-full">
       { data || isLoading || error ? (
         <Summary data={data} isLoading={isLoading} error={error} />
         ) : null }

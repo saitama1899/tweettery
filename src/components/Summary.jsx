@@ -82,7 +82,7 @@ function Summary({ data, isLoading, error }) {
 					</>
 				)}
 				<motion.div
-					className="shadow-md p-4 w-full"
+					className="shadow-md p-4 w-full overflow-scroll"
 					animate={{ backgroundColor: color }}
 				>
 					{isLoading && 'Wait please. This can take a few seconds...'}
