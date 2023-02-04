@@ -38,7 +38,7 @@ function ToggleTheme() {
 			className={`
 				h-8 w-20 flex items-center box-border cursor-pointer z-50 fixed right-16 top-6 px-[2px] rounded-[25px] 
 				dark:bg-gradient-to-r dark:from-sky-400 dark:via-sky-600 dark:to-gray-900 
-				bg-gradient-to-l from-rose-400 via-rose-200 to-white
+				bg-gradient-to-l from-rose-400 via-rose-200 to-white max-lg:bottom-6 max-lg:top-auto max-lg:right-8
 			`}
 			onClick={handleThemeSwitch}
 			style={{ justifyContent: theme === "dark" ? "flex-end" : "flex-start" }}
