@@ -2,7 +2,7 @@
 
 With Tweettery you can get a quick summary of (almost) any Twitter account, for free. You will be able to check what type of content has been doing lately and assess whether to follow him or not.
 
-This is a 1-week project in order to participate at [@midudev](https://www.github.com/midudev) hackathon: [midudev-cohere-2023](https://github.com/topics/midudev-cohere-2023), with main functionality on [co:here AI](https://cohere.ai/). Expect a lot of space for code, accessiblity and user experience improvements!
+This is a 1-week project in order to participate at  [midudev-cohere-2023](https://github.com/topics/midudev-cohere-2023) hackathon:  with main functionality on [co:here AI](https://cohere.ai/). Expect a lot of space for code, accessiblity and user experience improvements!
 
 - APP: [tweettery.vercel.app](https://tweettery.vercel.app)
 - API: [tweettery-api.vercel.app](https://tweettery-api.vercel.app)
