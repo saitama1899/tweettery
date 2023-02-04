@@ -7,7 +7,7 @@ This is a 1-week project in order to participate at [@midudev](https://www.githu
 - APP: [tweettery.vercel.app](https://tweettery.vercel.app)
 - API: [tweettery-api.vercel.app](https://tweettery-api.vercel.app)
 
-![Desktop preview](https://i.ibb.co/LJZyrfX/screen.png)
+![Desktop preview](screen.PNG)
 
 You can acces to the API code here https://github.com/saitama1899/tweettery-api. 
 Endpoints:
