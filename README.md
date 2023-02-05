@@ -29,16 +29,16 @@ This endpoint receives a username and makes two queries to the Twitter API. One 
 - The cohere API is very slow and I was thinking of original designs to distract the user's attention. The design consists of a sky whose elements float. For the topics, I had thought of floating balloons but I haven't had time.
 Speaking of design, I included a dark mode with a night sky.
 
+## 🗝 API Built with
+- [Express](https://expressjs.com/es/) For make the API.
+- [Co:here AI](https://cohere.ai/) For get summary data given a raw Twitter account timeline.
+- [Twitter API](https://developer.twitter.com/en/docs/twitter-api) For get the user id, avatar, and the timeline given a username.
+
 ## 💻 APP Built with
 - [Vite](https://vitejs.dev/) For build the project.
 - [ReactJs](https://es.reactjs.org/) For User UI.
 - [Framer Motion](https://www.framer.com/motion/) For frontend animations.
 - [Tailwind](https://tailwindcss.com) For frontend styles.
-
-## 🗝 API Built with
-- [Express](https://expressjs.com/es/) For make the API.
-- [Co:here AI](https://cohere.ai/) For get summary data given a raw Twitter account timeline.
-- [Twitter API](https://developer.twitter.com/en/docs/twitter-api) For get the user id, avatar, and the timeline given a username.
 
 ## 🛠️ APP Installation and usage
 ```bash
