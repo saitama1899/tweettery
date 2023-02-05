@@ -57,7 +57,7 @@ node index.js
 ```
 
 ## TODO
-- Performance and refactor improvements.
-- Improve the request prompt to get better results.
+- Performance and component refactor improvements.
+- Improve the request prompt to cohere to get better results.
 - Add new request to cohere to get reasons to follow that twitter account and show it.
 - Follow button.
