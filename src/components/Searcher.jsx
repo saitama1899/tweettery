@@ -10,7 +10,7 @@ function Searcher(props) {
   // const [error, setError] = useState(false)
 
   const handleInputChange = (event) => {
-    setInputValue(event.target.value.replace(/[^a-zA-Z0-9]/g, '').slice(0, 20))
+    setInputValue(event.target.value.replace(/((?=[^\w!])@\w+\b)/g, '').slice(0, 15))
   }
 
   useEffect(() => {
@@ -46,6 +46,7 @@ function Searcher(props) {
           whileHover={!isLoading && { scale: 1.025 }}
           transition={{ type: "spring", stiffness: 400, damping: 10 }}
           required
+          maxLength={15}
         />
         <motion.button
           className="w-[10%] bg-gradient-to-r bg-bg-sky-600 hover:bg-sky-500 h-8 text-white rounded-sm"
