@@ -18,12 +18,12 @@ This endpoint receives a username and makes two queries to the Twitter API. One 
 
 ## 📑 Developer Notes
 
-### 🗝 Developing the API
+#### Developing the API
 - With Cohere API, I found it hard to find a prompt that met the app's objective to a notable level. The idea was to train the AI with 2 examples of inputs and outputs and obtain a summary of the content divided into three parts: A top 10 of the topics it covers, a brief summary, and a reason why it would be good to follow that Twitter account. Right now, I've managed to get the first two fields with some reliability and an acceptable result, but it was impossible to receive the third one at least in the same request and with the free plan. In a To-do, there's a second request to obtain that third field, but I consider the waiting time already too high.
 
 - With the Twitter API, I was forced to make 2 requests, as you can't get a timeline just with the username, you need the Id.
 
-### 💻 Developing the APP
+#### Developing the APP
 - I have used framer motion in the animations to test this library. For the moment, I think its use can be good for saving lines of code, both in keyframes and in states and JavaScript logic, but it has a learning curve and also the package is too heavy. In the To-do, I'm trying to use the lazy loading offered by the library to save load.
 
 - The cohere API is very slow and I was thinking of original designs to distract the user's attention. The design consists of a sky whose elements float. For the topics, I had thought of floating balloons but I haven't had time.
