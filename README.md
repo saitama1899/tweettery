@@ -57,7 +57,7 @@ node index.js
 ```
 
 ## TODO
+- Train a custom model for better cohere results.
 - Improve performance and component refactor.
-- Improve the cohere request prompt to get better results.
 - Add new request to cohere to get reasons to follow that twitter account and show it.
 - Add Follow button.
