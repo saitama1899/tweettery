@@ -86,7 +86,7 @@ function Summary({ data, isLoading, error }) {
 					animate={{ backgroundColor: color }}
 				>
 					{isLoading && 'Wait please. This can take a few seconds...'}
-					{data?.data?.cohere && (output[1] ? output[1] : 'No summary available')}
+					{data?.data?.cohere && (output[1] ? output[1] : 'No summary available. Please try again!')}
 					{error && error?.response?.data?.error}
 				</motion.div>
 			</motion.div>
