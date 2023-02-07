@@ -59,6 +59,7 @@ node index.js
 ```
 
 ## TODO
+- Handle properly the error of inappropiate content. Now displays empty box.
 - Train a custom model for better cohere results.
 - Improve performance and component refactor.
 - Add new request to cohere to get reasons to follow that twitter account and show it.
