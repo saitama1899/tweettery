@@ -82,7 +82,7 @@ function Summary({ data, isLoading, error }) {
 					</>
 				)}
 				<motion.div
-					className="shadow-md p-4 w-full overflow-hidden"
+					className="shadow-md p-4 w-full overflow-hidden max-h-[350px]"
 					animate={{ backgroundColor: color }}
 				>
 					{isLoading && 'Wait please. This can take a few seconds...'}
@@ -95,8 +95,8 @@ function Summary({ data, isLoading, error }) {
 				{data?.data?.cohere && output[0].length > 0 && output[0].map((item, index) => (
 					<>
 						<motion.div
-							key={item}
-							className="p-4 bg-pink-200 rounded-full max-sm:p-2"
+							key={item + index}
+							className="p-4 bg-pink-200 rounded-full max-sm:p-2 capitalize"
 							controls={controls}
 							initial="initial"
 							animate="animate"
