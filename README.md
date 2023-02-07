@@ -7,6 +7,8 @@ This is a 1-week project in order to participate at  [midudev-cohere-2023](https
 - APP: [tweettery.vercel.app](https://tweettery.vercel.app)
 - API: [tweettery-api.vercel.app](https://tweettery-api.vercel.app)
 
+WARNING! The current cohere request take between 15 and 30+ seconds
+
 ![Desktop preview](screen.PNG)
 
 You can acces to the API code here https://github.com/saitama1899/tweettery-api. 
